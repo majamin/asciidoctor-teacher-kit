@@ -37,12 +37,16 @@ you can simply just grab the stylesheet in `stylesheets/simple.css` and:
 * `ruby` and ruby `bundle`
 * chromium browser (to enable PDF generation)
 
-. Clone: `git clone https://github.com/majamin/simple-asciidoctor-template`
-. `cd simple-asciidoctor-template`
+.Steps
+. Clone: `git clone https://github.com/majamin/asciidoctor-teacher-kit`
+. `cd asciidoctor-teacher-kit`
 . `bundle install`
 . `make`
 
 Build files will compile in the `build` directory.
+
+NOTE: you can create any hierarchy of files in the `src` directory - the build
+files will structure themselves accordingly.
 
 == Watch and show
 
