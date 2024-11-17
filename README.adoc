@@ -1,0 +1,63 @@
+= The Teachers' Asciidoctor Starter Kit
+:author: Marian Minar
+:email: majamin (AT) gmail
+:imagesdir: images
+
+This repo enables you to create:
+
+* A base HTML/PDF of your notes and other teaching materials
+* A handout version (by using the pre-processor `ifdef::handout`)
+* A revealjs presentation of the file
+
+In order to fully achieve the potential of this repo,
+you'll want to be familiar with:
+
+* https://docs.asciidoctor.org/asciidoc/latest/[Asciidoctor]
+* https://docs.asciidoctor.org/reveal.js-converter/latest/[Asciidoctor-Revealjs]
+* https://www.overleaf.com/learn/latex/TikZ_package[LaTeX tikz] syntax (for diagrams in tikz)
+
+== A simple start
+
+If you just want the simple stylesheet, without any of the extras,
+you can simply just grab the stylesheet in `stylesheets/simple.css` and:
+
+. Copy `simple.css` to the location of your `file.adoc`,
+. Put `:stylesheet: simple.css` in your `file.adoc` file,
+. Run `asciidoctor file.adoc`.
+
+.Requirements
+* `asciidoctor` executable
+
+== Full start
+
+`src/example.adoc` contains a comprehensive source file to create:
+
+.Requirements
+* `asciidoctor` executable
+* `ruby` and ruby `bundle`
+* chromium browser (to enable PDF generation)
+
+. Clone: `git clone https://github.com/majamin/simple-asciidoctor-template`
+. `cd simple-asciidoctor-template`
+. `bundle install`
+. `make`
+
+Build files will compile in the `build` directory.
+
+== Watch and show
+
+If you're in a tmux session, running `watch-and-show.sh` can load a
+nice dev environment, but is not necessary to be able to use this project.
+Running the script creates new windows in the current session to be
+able to monitor the live build and show.
+
+.Requirements
+* All of the above, and
+* `browser-sync` and `nodemon` installed via npm,
+* `tmux`
+
+== Preview
+
+See examples in the `examples` folder.
+
+image::example.png[width=600]
